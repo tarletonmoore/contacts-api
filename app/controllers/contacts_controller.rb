@@ -1,4 +1,4 @@
-class RecipesController < ApplicationController
+class ContactsController < ApplicationController
   def first_contact
     first = Contact.first
     render json: first
