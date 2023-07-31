@@ -1,11 +1,11 @@
 class ContactsController < ApplicationController
-  def first_contact
-    first = Contact.first
-    render json: first
+  def all_contacts
+    @contacts = Contact.all
+    render template: "contacts/index"
   end
 
-  def all_contacts
-    contacts = Contact.all
-    render json: contacts
+  def first_contact
+    @contact = Contact.first
+    render template: "contacts/show"
   end
 end
